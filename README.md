@@ -1,4 +1,4 @@
-## ***Vulnerability assessments***
+## ***Vulnerability Assessments***
 
 *A curated list of VULNERABLE APPS and SYSTEMS which can be used as PENETRATION TESTING PRACTICE LAB. This list aims to help starters as well as pros to test out and enhance **your** penetration skills.*
 
