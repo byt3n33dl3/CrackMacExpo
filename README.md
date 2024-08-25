@@ -69,7 +69,7 @@ $ python crackmacexpo.py
 # Lastly, run a built launcher on your target(s)
 ```
 
-**Warning:** Because payloads are created unique to the target system (automatically by the server), the server must be running when any bot connects for the first time.
+**Warning:** Because payloads are created unique to the target system ( Automatically by the server ), the server must be running when any bot connects for the first time.
 
 ### Advanced users
 
