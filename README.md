@@ -44,7 +44,7 @@ GUI frontend and CLI, for **macOS** or **OSX** distro Remote Access Tool. Penetr
 - Retrieve Chrome passwords
 - Retrieve iCloud tokens and contacts
 - Monitor the clipboard
-- Retrieve browser history (Chrome and Safari)
+- Retrieve browser history ( Chrome and Safari )
 - [Phish](https://i.imgur.com/x3ilHQi.png) for iCloud passwords via iTunes
 - iTunes ( iOS ) backup enumeration
 - Record the microphone
