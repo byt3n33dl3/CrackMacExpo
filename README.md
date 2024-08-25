@@ -1,5 +1,22 @@
 # CrackMacExpo
 
+GUI frontend and CLI, for **macOS** or **OSX** distro Remote Access Tool. Penetrate the SSL and Security of OSX distro with a sharp IPA's malware, specialized for Apple.
+
+```python
+         __             _,-"~^"-.
+       _// )      _,-"~`         `.
+     ." ( /`"-,-"`                 ;
+    / 6                             ;    'MacOS & OSX'
+   /           ,             ,-"     ;  Distro Execution
+  (,__.--.      \           /        ;
+   //'   /`-.\   |          |        `.______________.
+     _.-'_/`  )  )--...,,,___\     \-`----""""~~~~^^/
+   ((("~` _.-'.-'           __`-.   )        
+         ((("`             (((---~"`      
+```
+
+---
+
 <p align="center">
   <a href="https://github.com/Marten4n6/EvilOSX/blob/master/LICENSE.txt">
       <img src="https://img.shields.io/badge/license-GPLv3-red.svg?style=flat-square" alt="License">
@@ -17,9 +34,6 @@
       <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square" alt="Contributing">
   </a>
 </p>
-
-<hr>
-
 
 # Features
 - Emulate a terminal instance
