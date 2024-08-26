@@ -3,7 +3,7 @@
 GUI frontend and CLI, for **macOS** or **OSX** distro Remote Access Tool. Penetrate the SSL and Security of OSX distro with a sharp IPA's malware, specialized for Apple.
 
 <a href="https://github.com/pxcs/CrackMacExpo/"><p align="center">
-<img width="300" height="300" src="/img/crackmacpexpo.png">
+<img width="300" height="300" src="/img/crackmacexpo.png">
 </p></a>
 
 ---
@@ -84,6 +84,12 @@ Feel free to submit any issues or feature requests [here](https://github.com/pxc
 
 ## Contribution
 For a simple guide on how to create modules click [here](https://github.com/pxcs/CrackMacExpo).
+
+## Certifications Related
+
+>#### OSMR | Offensive Security macOS Researcher
+>#### GXPN | GIAC Exploit Researcher and Advanced Penetration Tester
+>#### eCPPTv2 | Certified Professional Penetration Tester
 
 # Credits
 - The awesome [Empire](https://github.com/EmpireProject) project
