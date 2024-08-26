@@ -87,10 +87,15 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 ## Certifications Related
 
 >##### OSMR | Offensive Security macOS Researcher
+
 >##### GXPN | GIAC Exploit Researcher and Advanced Penetration Tester
+
 >##### eCPPT | INE Security Certified Professional Penetration Tester
+
 >##### eCPPTv2 | INE Security Certified Professional Penetration Tester v2
+
 >##### CᴵEH (Master) | Certified Ethical Hacker (Master)
+
 >##### LᴵPT (Master) | Licensed Penetration Tester (Master)
 
 # Credits
