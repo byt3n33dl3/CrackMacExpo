@@ -6,7 +6,10 @@ GUI frontend and CLI **RAT**, a Remote Access Tool for **macOS** or **OSX** dist
 <img width="300" height="300" src="/img/crackmacexpo.png">
 </p></a>
 
----
+<div align="center">
+<h2>MacOS & OSX Remote Access</h2>
+<p></div>
+
 
 <p align="center">
   <a href="https://github.com/Marten4n6/EvilOSX/blob/master/LICENSE.txt">
@@ -87,11 +90,11 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 
 ## Certifications Related
 
->#### OSMR | Offensive Security macOS Researcher
->#### GXPN | GIAC Exploit Researcher and Advanced Penetration Tester
->#### eCPPTv2 | Certified Professional Penetration Tester
->#### CᴵEH (Master) | Certified Ethical Hacker (Master)
->#### LᴵPT (Master) | Licensed Penetration Tester (Master)
+>##### OSMR | Offensive Security macOS Researcher
+>##### GXPN | GIAC Exploit Researcher and Advanced Penetration Tester
+>##### eCPPTv2 | Certified Professional Penetration Tester
+>##### CᴵEH (Master) | Certified Ethical Hacker (Master)
+>##### LᴵPT (Master) | Licensed Penetration Tester (Master)
 
 # Credits
 - The awesome [Empire](https://github.com/EmpireProject) project
