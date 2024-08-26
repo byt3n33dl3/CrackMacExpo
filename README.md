@@ -2,18 +2,9 @@
 
 GUI frontend and CLI, for **macOS** or **OSX** distro Remote Access Tool. Penetrate the SSL and Security of OSX distro with a sharp IPA's malware, specialized for Apple.
 
-```python
-         __             _,-"~^"-.
-       _// )      _,-"~`         `.
-     ." ( /`"-,-"`                 ;
-    / 6                             ;    'MacOS & OSX'
-   /           ,             ,-"     ;  Distro Execution
-  (,__.--.      \           /        ;
-   //'   /`-.\   |          |        `.______________.
-     _.-'_/`  )  )--...,,,___\     \-`----""""~~~~^^/
-   ((("~` _.-'.-'           __`-.   )        
-         ((("`             (((---~"`      
-```
+<a href="https://github.com/pxcs/CrackMacExpo/"><p align="center">
+<img width="300" height="300" src="/img/crackmacpexpo.png">
+</p></a>
 
 ---
 
