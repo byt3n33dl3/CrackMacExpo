@@ -1,0 +1,11 @@
+C:\Users\admin\source\repos\repos\remote-video\server\server\bin\Debug\server.exe.config
+C:\Users\admin\source\repos\repos\remote-video\server\server\bin\Debug\server.exe
+C:\Users\admin\source\repos\repos\remote-video\server\server\bin\Debug\server.pdb
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.Form1.resources
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.Properties.Resources.resources
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.exe
+C:\Users\admin\source\repos\repos\remote-video\server\server\obj\Debug\server.pdb
