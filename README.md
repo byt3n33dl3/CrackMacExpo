@@ -47,7 +47,7 @@ GUI frontend and CLI **RAT**, a Remote Access Tool for **macOS** or **OSX** dist
 
 ## How To Use
 
-```bash
+```python
 # Clone or download this repository
 $ git clone https://github.com/pxcs/CrackMacExpo
 
@@ -68,7 +68,7 @@ $ python crackmacexpo.py
 ### Advanced users
 
 There's also a CLI for those who want to use this over SSH:
-```bash
+```python
 # Create a launcher to infect your target(s)
 $ python crackmacexpo.py --builder
 
@@ -77,10 +77,6 @@ $ python crackmacexpo.py --cli --port 443
 
 # Lastly, run a built launcher on your target(s)
 ```
-
-## Screenshots
-
-![CLI](https://i.imgur.com/DGYCQMl.png)
 
 ## Issues
 Feel free to submit any issues or feature requests [here](https://github.com/pxcs/CrackMacExpo/issues).
@@ -92,7 +88,8 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 
 >##### OSMR | Offensive Security macOS Researcher
 >##### GXPN | GIAC Exploit Researcher and Advanced Penetration Tester
->##### eCPPTv2 | Certified Professional Penetration Tester
+>##### eCPPT | INE Security Certified Professional Penetration Tester
+>##### eCPPTv2 | INE Security Certified Professional Penetration Tester v2
 >##### CᴵEH (Master) | Certified Ethical Hacker (Master)
 >##### LᴵPT (Master) | Licensed Penetration Tester (Master)
 
@@ -104,3 +101,6 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 - [urwid](http://urwid.org/) and [this code](https://github.com/izderadicka/xmpp-tester/blob/master/commander.py) which saved me a lot of time with the CLI
 - Logo created by [GangstaCrew](https://www.behance.net/byt3bl33d3r)
 - Repo [Marten4n6](https://github.com/Marten4n6/EvilOSX/)
+
+# Contact Me
+- pxmxx3csz@outlook.com
