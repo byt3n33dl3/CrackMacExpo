@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <!--
+     DotnetCatTests project properties
+    -->
+    <PropertyGroup>
+        <ApplicationIcon>../DotnetCat/Resources/Icon.ico</ApplicationIcon>
+        <AssemblyName>DotnetCatTests</AssemblyName>
+        <Authors>vandavey</Authors>
+        <Configurations>Debug;Release;Linux;ARM64</Configurations>
+        <Copyright>Copyright (c) 2022 vandavey</Copyright>
+        <Description>DotnetCat unit tests</Description>
+        <ErrorReport>none</ErrorReport>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+        <Nullable>enable</Nullable>
+        <OutputType>library</OutputType>
+        <PackageLicenseFile>../DotnetCat/Resources/LICENSE.md</PackageLicenseFile>
+        <Platforms>AnyCPU</Platforms>
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <RepositoryUrl>https://github.com/vandavey/DotnetCat</RepositoryUrl>
+        <RootNamespace>DotnetCatTests</RootNamespace>
+        <TargetFramework>net8.0</TargetFramework>
+        <WarningLevel>7</WarningLevel>
+    </PropertyGroup>
+
+    <!--
+     Configure debug specific properties
+    -->
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <OutputPath>bin/Debug</OutputPath>
+    </PropertyGroup>
+
+    <!--
+     Configure release specific properties
+    -->
+    <PropertyGroup Condition="'$(Configuration)'!='Debug'">
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>none</DebugType>
+        <OutputPath>bin/Release</OutputPath>
+    </PropertyGroup>
+
+    <!--
+     Define Linux compiler constants
+    -->
+    <PropertyGroup Condition="'$(Configuration)'=='ARM64' OR '$(Configuration)'=='Linux'">
+        <DefineConstants>LINUX</DefineConstants>
+    </PropertyGroup>
+
+    <!--
+     Define Windows compiler constants
+    -->
+    <PropertyGroup Condition="'$(Configuration)'=='Debug' OR '$(Configuration)'=='Release'">
+        <DefineConstants>WINDOWS</DefineConstants>
+    </PropertyGroup>
+
+    <!--
+     Nuget package information
+    -->
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.*" />
+        <PackageReference Include="MSTest.TestAdapter" Version="3.*" />
+        <PackageReference Include="MSTest.TestFramework" Version="3.*" />
+    </ItemGroup>
+
+    <!--
+     Project reference to DotnetCat
+    -->
+    <ItemGroup>
+        <ProjectReference Include="../DotnetCat/DotnetCat.csproj" />
+    </ItemGroup>
+
+    <!--
+     Include source code and resource directories
+    -->
+    <ItemGroup>
+        <Folder Include="Errors/" />
+        <Folder Include="IO/" />
+        <Folder Include="Network/" />
+        <Folder Include="Properties/" />
+        <Folder Include="Shell/" />
+        <Folder Include="Utils/" />
+    </ItemGroup>
+</Project>

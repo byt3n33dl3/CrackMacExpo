@@ -1,0 +1,19 @@
+* text    eol=lf
+*.aps     binary
+*.assets  binary
+*.cache   binary
+*.class   binary
+*.com     binary
+*.dgspec  binary
+*.dll     binary
+*.docx    binary
+*.exe     binary
+*.ico     binary
+*.jpeg    binary
+*.jpg     binary
+*.obj     binary
+*.pdb     binary
+*.pdf     binary
+*.png     binary
+*.suo     binary
+*.zip     binary

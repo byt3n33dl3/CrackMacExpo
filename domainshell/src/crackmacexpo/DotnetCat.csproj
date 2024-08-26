@@ -1,0 +1,187 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <!--
+     Configure DotnetCat project properties
+    -->
+    <PropertyGroup>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <ApplicationIcon>Resources/Icon.ico</ApplicationIcon>
+        <AssemblyName>dncat</AssemblyName>
+        <Authors>vandavey</Authors>
+        <Configurations>Debug;Release;Linux;ARM64</Configurations>
+        <Copyright>Copyright (c) 2024 vandavey</Copyright>
+        <Description>DotnetCat</Description>
+        <ErrorReport>none</ErrorReport>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <IsPackable>false</IsPackable>
+        <Nullable>enable</Nullable>
+        <OutputType>exe</OutputType>
+        <PackageLicenseFile>$(SolutionDir)../LICENSE.md</PackageLicenseFile>
+        <Platforms>AnyCPU</Platforms>
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <PublishSingleFile>true</PublishSingleFile>
+        <PublishTrimmed>true</PublishTrimmed>
+        <RepositoryUrl>https://github.com/vandavey/DotnetCat</RepositoryUrl>
+        <RootNamespace>DotnetCat</RootNamespace>
+        <StartupObject>DotnetCat.Program</StartupObject>
+        <TargetFramework>net8.0</TargetFramework>
+        <WarningLevel>7</WarningLevel>
+    </PropertyGroup>
+
+    <!--
+     Configure debug specific properties
+    -->
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin/Debug</OutputPath>
+    </PropertyGroup>
+
+    <!--
+     Configure release specific properties
+    -->
+    <PropertyGroup Condition="'$(Configuration)'!='Debug'">
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>none</DebugType>
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <Optimize>true</Optimize>
+        <OutputPath>bin/Release</OutputPath>
+    </PropertyGroup>
+
+    <!--
+     Define Linux compiler constants
+    -->
+    <PropertyGroup Condition="'$(Configuration)'=='ARM64' OR '$(Configuration)'=='Linux'">
+        <DefineConstants>LINUX</DefineConstants>
+    </PropertyGroup>
+
+    <!--
+     Define Windows compiler constants
+    -->
+    <PropertyGroup Condition="'$(Configuration)'=='Debug' OR '$(Configuration)'=='Release'">
+        <DefineConstants>WINDOWS</DefineConstants>
+    </PropertyGroup>
+
+    <!--
+     Make internals accessible to the unit tests project
+    -->
+    <ItemGroup>
+        <InternalsVisibleTo Include="DotnetCatTests" />
+    </ItemGroup>
+
+    <!--
+     Include source code and resource folders
+    -->
+    <ItemGroup>
+        <Folder Include="Contracts/" />
+        <Folder Include="Errors/" />
+        <Folder Include="IO/" />
+        <Folder Include="Network/" />
+        <Folder Include="Properties/" />
+        <Folder Include="Resources/" />
+        <Folder Include="Shell/" />
+        <Folder Include="Utils/" />
+    </ItemGroup>
+
+    <!--
+     Include solution files that have no role in the build process
+    -->
+    <ItemGroup>
+        <None Include="$(SolutionDir)../LICENSE.md" Visible="false" />
+        <None Include="$(SolutionDir)../README.md" Visible="false" />
+        <None Include="$(SolutionDir)../tools/dncat-install.ps1" Visible="false" />
+        <None Include="$(SolutionDir)../tools/dncat-install.sh" Visible="false" />
+        <None Include="$(SolutionDir)../tools/dncat-uninstall.ps1" Visible="false" />
+        <None Include="$(SolutionDir)../tools/dncat-uninstall.sh" Visible="false" />
+    </ItemGroup>
+
+    <!--
+     Copy cross-platform supporting files to the publish output directory
+    -->
+    <ItemGroup Condition="'$(PublishProtocol)'!=''">
+        <ContentWithTargetPath Include="$(SolutionDir)../LICENSE.md">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <TargetPath>LICENSE.md</TargetPath>
+        </ContentWithTargetPath>
+    </ItemGroup>
+
+    <!--
+     Copy Linux-specific supporting files to the publish output directory
+    -->
+    <ItemGroup Condition="'$(PublishProtocol)'!='' AND $(RuntimeIdentifier.StartsWith('linux-'))">
+        <ContentWithTargetPath Include="$(SolutionDir)../tools/dncat-install.sh">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <TargetPath>dncat-install.sh</TargetPath>
+        </ContentWithTargetPath>
+
+        <ContentWithTargetPath Include="$(SolutionDir)../tools/dncat-uninstall.sh">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <TargetPath>dncat-uninstall.sh</TargetPath>
+        </ContentWithTargetPath>
+    </ItemGroup>
+
+    <!--
+     Copy Windows-specific supporting files to the publish output directory
+    -->
+    <ItemGroup Condition="'$(PublishProtocol)'!='' AND $(RuntimeIdentifier.StartsWith('win-'))">
+        <ContentWithTargetPath Include="$(SolutionDir)../tools/dncat-install.ps1">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <TargetPath>dncat-install.ps1</TargetPath>
+        </ContentWithTargetPath>
+
+        <ContentWithTargetPath Include="$(SolutionDir)../tools/dncat-uninstall.ps1">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <TargetPath>dncat-uninstall.ps1</TargetPath>
+        </ContentWithTargetPath>
+    </ItemGroup>
+
+    <!--
+     Cleanup amy existing build output files
+    -->
+    <Target Name="CleanOutput">
+        <Message Importance="high" Text="-----[ 'CleanOutput' Task ]-----" />
+
+        <RemoveDir Directories="$(ProjectDir)bin/Debug/net8.0/" />
+        <RemoveDir Directories="$(ProjectDir)bin/Release/net8.0/" />
+
+        <Message Importance="high" Text="--------------------------------" />
+    </Target>
+
+    <!--
+     Cleanup any existing build output files after cleaning
+    -->
+    <Target Name="CleanBuildOutputPostClean" AfterTargets="Clean">
+        <Message Importance="high" Text="-----[ 'CleanBuildOutputPostClean' Task ]-----" />
+        <CallTarget Targets="CleanOutput" />
+        <Message Importance="high" Text="----------------------------------------------" />
+    </Target>
+
+    <!--
+     Cleanup any existing publish output files before publishing
+    -->
+    <Target Name="CleanPublishOutput" BeforeTargets="BeforeBuild" Condition="'$(PublishProtocol)'!=''">
+        <Message Importance="high" Text="-----[ 'CleanPublishOutput' Task ]-----" />
+
+        <CallTarget Targets="CleanOutput" />
+        <Delete Files="$(ProjectDir)bin/Zips/DotnetCat_$(RuntimeIdentifier).zip" />
+        <RemoveDir Directories="$(ProjectDir)bin/Release/Publish/$(RuntimeIdentifier)" />
+
+        <Message Importance="high" Text="---------------------------------------" />
+    </Target>
+
+    <!--
+     Create a zip file containing the published application files
+    -->
+    <Target Name="CreateZip" AfterTargets="Publish" Condition="'$(PublishProtocol)'!=''">
+        <Message Importance="high" Text="-----[ 'CreateZip' Task ]-----" />
+
+        <ZipDirectory Overwrite="true"
+                      SourceDirectory="$(PublishDir)"
+                      DestinationFile="$(ProjectDir)bin/Zips/DotnetCat_$(RuntimeIdentifier).zip">
+        </ZipDirectory>
+
+        <Message Importance="high" Text="------------------------------" />
+    </Target>
+</Project>
