@@ -1,0 +1,5 @@
+*.idea
+*.swp
+*.suo
+.vs
+*.user
