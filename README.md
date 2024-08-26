@@ -1,6 +1,6 @@
 # CrackMacExpo
 
-GUI frontend and CLI, for **macOS** or **OSX** distro Remote Access Tool. Penetrate the SSL and Security of OSX distro with a sharp IPA's malware, specialized for Apple.
+GUI frontend and CLI **RAT**, a Remote Access Tool for **macOS** or **OSX** distro. Penetrate the SSL and Security system of OSX distro with a sharp IPA's malware, specialized for Apple.
 
 <a href="https://github.com/pxcs/CrackMacExpo/"><p align="center">
 <img width="300" height="300" src="/img/crackmacexpo.png">
@@ -13,7 +13,7 @@ GUI frontend and CLI, for **macOS** or **OSX** distro Remote Access Tool. Penetr
       <img src="https://img.shields.io/badge/license-GPLv3-red.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/Marten4n6/EvilOSX/blob/master/LICENSE.txt">
-      <img src="https://img.shields.io/badge/C-red.svg?style=flat-square" alt="Python">
+      <img src="https://img.shields.io/badge/LᴵPT Master-red.svg?style=flat-square" alt="LPT-Master">
   </a>
   <a href="https://github.com/Marten4n6/EvilOSX/blob/master/LICENSE.txt">
       <img src="https://img.shields.io/badge/Python3-blue.svg?style=flat-square" alt="Python">
@@ -90,6 +90,8 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 >#### OSMR | Offensive Security macOS Researcher
 >#### GXPN | GIAC Exploit Researcher and Advanced Penetration Tester
 >#### eCPPTv2 | Certified Professional Penetration Tester
+>#### CᴵEH (Master) | Certified Ethical Hacker (Master)
+>#### LᴵPT (Master) | Licensed Penetration Tester (Master)
 
 # Credits
 - The awesome [Empire](https://github.com/EmpireProject) project
