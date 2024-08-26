@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RAT
+namespace crackmacexpo
 {
     public partial class StartUp : Form
     {
@@ -33,7 +33,7 @@ namespace RAT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("aurakaleidoscope@gmail.com", "Hacker Doll", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("github.com/pxcs/CrackMacExpo", "Hacker Doll", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
