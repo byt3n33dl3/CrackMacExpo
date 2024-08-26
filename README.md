@@ -102,5 +102,5 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 - manwhoami for his projects: OSXChromeDecrypt, MMeTokenDecrypt, iCloudContacts
 - The slowloris module is pretty much copied from [PySlowLoris](https://github.com/ProjectMayhem/PySlowLoris)
 - [urwid](http://urwid.org/) and [this code](https://github.com/izderadicka/xmpp-tester/blob/master/commander.py) which saved me a lot of time with the CLI
-- Logo created by [motusora](https://www.behance.net/motusora)
+- Logo created by [GangstaCrew](https://www.behance.net/byt3bl33d3r)
 - Repo [Marten4n6](https://github.com/Marten4n6/EvilOSX/)
