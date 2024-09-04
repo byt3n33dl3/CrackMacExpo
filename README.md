@@ -1,13 +1,13 @@
 # CrackMacExpo
 
-GUI frontend and CLI **RAT**, a Remote Access Tool for **macOS** or **OSX** distro. Penetrate the SSL and Security system of OSX distro with a sharp IPA's malware, specialized for Apple.
+GUI frontend and CLI **RAT**, a Remote Access Tool for **MacOS** or **OSX** distro. Penetrate the SSL and Security system of OSX distro with a sharp IPA's malware, specialized for Apple.
 
 <a href="https://github.com/pxcs/CrackMacExpo/"><p align="center">
 <img width="300" height="300" src="/img/crackmacexpo.png">
 </p></a>
 
 <div align="center">
-<h2>MacOS & OSX Remote Access</h2>
+<h2>MacOS & OSX</h2>
 <p></div>
 
 
@@ -65,7 +65,7 @@ $ python crackmacexpo.py
 
 **Warning:** Because payloads are created unique to the target system ( Automatically by the server ), the server must be running when any bot connects for the first time.
 
-### Advanced users
+## Advanced users
 
 There's also a CLI for those who want to use this over SSH:
 ```python
