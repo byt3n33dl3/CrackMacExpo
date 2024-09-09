@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RAT", "RAT.csproj", "{CEA3963B-9C21-4A80-BCD7-3B8137077C5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrackMacExpo", "CrackMacExpo.csproj", "{CEA3963B-9C21-4A80-BCD7-3B8137077C5F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RAT_Setup", "..\Installer_RAT_V1\RAT_Setup\RAT_Setup.vdproj", "{E3DA5070-9E39-4470-9091-EF3D22C92497}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CrackMacExpo_Setup", "..\Installer_CrackMacExpo_V1\CrackMacExpo_Setup\CrackMacExpo_Setup.vdproj", "{E3DA5070-9E39-4470-9091-EF3D22C92497}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
