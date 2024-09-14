@@ -1,6 +1,6 @@
 # CrackMacExpo
 
-GUI frontend and CLI **RAT**, a Remote Access Tool for **MacOS** or **OSX** distro. Penetrate the SSL and Security system of OSX distro with a sharp IPA's malware, specialized for Apple.
+GUI frontend and CLI **RAT**, a Remote Access Tool for **MacOS** or **OSX** distro. Penetrate the SSL and Security system of OSX distro with a sharp IPA's Malware, Specialized for Apple.
 
 <a href="https://github.com/pxcs/CrackMacExpo/"><p align="center">
 <img width="300" height="300" src="/img/crackmacexpo.png">
@@ -103,7 +103,7 @@ For a simple guide on how to create modules click [here](https://github.com/pxcs
 - Shoutout to [Patrick Wardle](https://twitter.com/patrickwardle) for his awesome talks, check out [Objective-See](https://objective-see.com/)
 - manwhoami for his projects: OSXChromeDecrypt, MMeTokenDecrypt, iCloudContacts
 - The slowloris module is pretty much copied from [PySlowLoris](https://github.com/ProjectMayhem/PySlowLoris)
-- [urwid](http://urwid.org/) and [this code](https://github.com/izderadicka/xmpp-tester/blob/master/commander.py) which saved me a lot of time with the CLI
+- [urwid](http://urwid.org/) and this [code](https://github.com/izderadicka/xmpp-tester/blob/master/commander.py) which saved me a lot of time with the CLI
 - Logo created by [GangstaCrew](https://www.behance.net/byt3bl33d3r)
 - Repo [Marten4n6](https://github.com/Marten4n6/EvilOSX/)
 
